@@ -8,7 +8,7 @@ There’s also an API so you can add your own stocks to the app.
 - Make sure vRP and mysql-async is up and running
 - Import vrp_stockmarket.sql into your database
 - Add 'ensure vrp_stockmarket' to your configuration file for startup
-- Start your server :slight_smile:
+- Start your server
 
 You can open the window by clicking the STOCK menu in the vRP menu in the game.
 
@@ -55,7 +55,7 @@ vRP와 완벽히 호환되는 주식 스크립트 입니다.
 - vRP와 mysql-async가 정상 작동중인지 확인하세요.
 - vrp_stockmarket.sql 을(를) 본인 서버의 데이터베이스에 import 하세요.
 - 'ensure vrp_stockmarket' 을(를) server.cfg에 추가하세요.
-- 서버를 키세요! :slight_smile:
+- 서버를 키세요!
 
 인게임의 핸드폰 메뉴에서 주식 메뉴를 열 수 있습니다.
 
