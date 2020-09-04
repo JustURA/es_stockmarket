@@ -43,10 +43,6 @@ set vrp_stockmarket_lowestBasePercent 70
 set vrp_stockmarket_highestBasePercent 200
 ```
 
-Screenshots
-
-![](https://i.imgur.com/d7furrc.png)
-
 # vrp_stockmarket (KOR)
 vRP와 완벽히 호환되는 주식 스크립트 입니다.
 
@@ -87,6 +83,6 @@ set vrp_stockmarket_lowestBasePercent 70
 set vrp_stockmarket_highestBasePercent 200
 ```
 
-스크린샷
+## SCREENSHOT (스크린샷)
 
 ![](https://i.imgur.com/d7furrc.png)
