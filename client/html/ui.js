@@ -1,3 +1,7 @@
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const setUI = (enable) => {
     if (enable)
         document.getElementById("content").style.display = "block";
@@ -14,8 +18,8 @@ const templateCompany = `
     <td>
         <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="buy" id="ABR_buy" class="btn btn-primary">Buy</button>
-                <button type="button" class="sell"  id="ABR_sell" class="btn btn-secondary">Sell</button>
+                <button type="button" id="ABR_buy" class="btn btn-primary">Buy</button>
+                <button type="button" id="ABR_sell" class="btn btn-danger">Sell</button>
             </div>
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -36,14 +40,14 @@ const addCompany = (abbreviation, name, owned, worth) => {
     modifiedTemplate.innerHTML = modifiedTemplate.innerHTML.replace(/ABR/g, abbreviation)
     modifiedTemplate.innerHTML = modifiedTemplate.innerHTML.replace("FULLNAME", name)
     modifiedTemplate.innerHTML = modifiedTemplate.innerHTML.replace("OWNED", owned)
-    modifiedTemplate.innerHTML = modifiedTemplate.innerHTML.replace("WORTH", worth)
+    modifiedTemplate.innerHTML = modifiedTemplate.innerHTML.replace("WORTH", numberWithCommas(worth))
 
     document.getElementById("stockmarket").appendChild(modifiedTemplate);
 }
 
 const addHandlers = () => {
-    const buyButtons = document.getElementsByClassName("buy");
-    const sellButtons = document.getElementsByClassName("sell");
+    const buyButtons = document.getElementsByClassName("btn btn-primary");
+    const sellButtons = document.getElementsByClassName("btn btn-danger");
 
     for (let bButton of buyButtons) {
         bButton.onclick = () => {
